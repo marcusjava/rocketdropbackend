@@ -27,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 //middleware global para o socket
 app.use((req, res, next) => {
 	req.io = io;
+
 	return next();
 });
 

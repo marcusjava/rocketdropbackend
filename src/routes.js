@@ -6,7 +6,7 @@ const multerConfig = require('./config/multer');
 
 const routes = express.Router();
 
-routes.get('/', BoxController.store);
+routes.get('/', (req, res) => res.send('Aplicativo iniciado com sucesso!'));
 
 routes.post('/boxes', BoxController.store);
 
